@@ -1,9 +1,5 @@
 const initialAmount = document.getElementById('initial_amount').innerText;
-
 const initialSum = parseFloat(initialAmount);
-
-
-
 
 
 // for Noakhali-----
@@ -57,6 +53,9 @@ Swal.fire({
   
 })
 
+
+
+
 // for Feni---
 
 document.getElementById('feni_donation').addEventListener('click', function(){
@@ -108,8 +107,6 @@ Swal.fire({
  
   
 })
-
-
 
 
 
