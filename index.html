@@ -6,6 +6,7 @@
   <title>Donate-Bangladesh</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
     <div class="bg-[#F9F7F3] p-2 pb-6 ">
       <nav class="container my-4 space-y-4 flex flex-col lg:flex-row justify-around items-center ">
       
-        <div class="bg-[#B4F461] rounded-md py-2 px-6">
+        <div id="btn_blog" class="bg-[#B4F461] rounded-md py-2 px-6">
          <button class="text-2xl font-semibold">Blog</button>
         </div>
 
@@ -25,7 +26,7 @@
           <p class="flex gap-2 text-3xl font-semibold">
             <img src="./assets/coin.png" alt="">
 
-            <span class="font-semibold text-3xl">5500</span>
+            <span id="initial_amount" class="font-semibold text-3xl">5500</span>
 
             BDT</p>
         </div>
@@ -34,13 +35,17 @@
     </div>
 
     <div class="flex justify-center items-center space-x-4 my-10">
-      <button class="bg-[#B4F461] rounded-md py-4 px-8 font-semibold text-2xl">Donate</button>
-      <button class="bg-slate-100 rounded-md py-4 px-8 font-semibold text-2xl border-2">History</button>
+      <button id="btn_donate_tab" class="bg-[#B4F461] rounded-md py-4 px-8 font-semibold text-2xl">Donate</button>
+
+      <button id="btn_history_tab" class="bg-slate-100 rounded-md py-4 px-8 font-semibold text-2xl border-2">History</button>
     </div>
   </header>
 
+
+
+
   <main>
-    <!-- card -->
+    <!-- card-1 -->
     <div class="container mx-auto card flex-col lg:flex-row lg:card-side bg-base-100 shadow-2xl border-4 w-[80%] p-6 mt-20">
       <div class="p-2 lg:w-[50%]">
         <figure>
@@ -54,22 +59,25 @@
           <p class="flex gap-2 text-3xl font-semibold">
             <img class="" src="./assets/coin.png" alt="">
 
-            <span class="font-semibold text-3xl">00.00</span>
+            <span id="noakhali_donation_amount" class="font-semibold text-3xl">00.00</span>
 
             BDT</p>
         </div>
         <h2 class="card-title text-2xl font-semibold">Donate for Flood at Noakhali, Bangladesh</h2>
         <p>
           The Noakhali flood has left thousands displaced and in urgent need of food, shelter, and medical aid. Your generous donation can help provide critical relief and support to the affected families.</p>
-          <div class="bg-[#FFFFFF] border-2">
-            <input type="text" name="" id="" placeholder="write donation amount" class="p-2">
+          <div class="bg-[#FFFFFF] border-2 w-[100%]">
+            <input id="noakhali_input" type="text" name="" id="" placeholder="write donation amount" class="p-2 w-[100%]">
           </div>
-        <div class="card-actions py-2 justify-center text-center w-full bg-[#B4F461]">
-          <button class="text-2xl font-semibold">Donate Now</button>
+        <div class="card-actions py-2 justify-center rounded-md text-center w-full bg-[#B4F461]">
+          <button id="noakhali_donation" class="donate_now text-2xl font-semibold">Donate Now</button>
         </div>
       </div>
     </div>
 
+
+
+    <!-- card-2 -->
 
     <div class="container mx-auto card flex-col lg:flex-row lg:card-side bg-base-100 shadow-xl border-4 w-[80%] p-6 mt-20">
       <div class="p-2 lg:w-[50%]">
@@ -84,7 +92,7 @@
           <p class="flex gap-2 text-3xl font-semibold">
             <img src="./assets/coin.png" alt="">
 
-            <span class="font-semibold text-3xl">00.00</span>
+            <span id="feni_donation_amount" class="font-semibold text-3xl">00.00</span>
 
             BDT</p>
         </div>
@@ -95,10 +103,14 @@
             <input type="text" name="" id="" placeholder="write donation amount" class="p-2">
           </div>
         <div class="card-actions py-2 justify-center text-center w-full bg-[#B4F461]">
-          <button class="text-2xl font-semibold">Donate Now</button>
+          <button id="feni_donation" class="donate_now text-2xl font-semibold">Donate Now</button>
         </div>
       </div>
     </div>
+
+
+    <!-- card-3  -->
+
     <div class="container mx-auto card lg:card-side bg-base-100 shadow-xl border-4 w-[80%] p-6 mt-20">
       <div class="p-2 lg:w-[50%]">
         <figure>
@@ -112,7 +124,7 @@
           <p class="flex gap-2 text-3xl font-semibold">
             <img src="./assets/coin.png" alt="">
 
-            <span class="font-semibold text-3xl">00.00</span>
+            <span id="quota_donation_amount" class="font-semibold text-3xl">00.00</span>
 
             BDT</p>
         </div>
@@ -123,12 +135,20 @@
             <input type="text" name="" id="" placeholder="write donation amount" class="p-2">
           </div>
         <div class="card-actions py-2 justify-center text-center w-full bg-[#B4F461]">
-          <button class="text-2xl font-semibold">Donate Now</button>
+          <button id="qouta_donate" class="text-2xl font-semibold">Donate Now</button>
         </div>
       </div>
     </div>
+
+
+    <!-- history tab --> 
+
+    <div id="history_container" class="container w-[80%] my-10 p-2">
+
+    </div>
   </main>
   <footer></footer>
-  
+  <script src="./js/noakhali.js"></script>
+  <script src="./js/utilities.js"></script>
 </body>
 </html>
