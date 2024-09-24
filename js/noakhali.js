@@ -24,6 +24,30 @@ document.getElementById('noakhali_donation').addEventListener('click', function(
   
     document.getElementById('noakhali_donation_amount').innerText = totalAmount;
     document.getElementById('initial_amount').innerText = finalTotal;
+
+       // history tab function----
+       const historyList = document.createElement('div');
+       historyList.className = 'bg-white border-l-4 border-green-500 p-2'
+       historyList.innerHTML = `
+        
+       <h2 class="text-2xl font-semibold ml-2 flex"><img src="/assets/coin.png" alt="" /> 
+       <span class="text-3xl text-blue-700 font-bold ml-2">
+       ${inputAmount} </span> BDT donated for "Aid for Injured in the Quota Movement"
+       </h2> 
+      
+      <p>Donated Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}</p>
+      
+       `
+   
+       const historyContainer = document.getElementById('history_container');
+       historyContainer.insertBefore(historyList, historyContainer.firstChild)
+       
+
+
+
+
+
+
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -131,8 +155,19 @@ document.getElementById('quota_donation').addEventListener('click', function(){
     
   
   
-    document.getElementById('feni_donation_amount').innerText = totalAmount;
+    document.getElementById('quota_donation_amount').innerText = totalAmount;
     document.getElementById('initial_amount').innerText = finalTotal;
+
+    // history tab
+
+   
+
+
+
+
+
+
+
     Swal.fire({
       position: "top-end",
       icon: "success",
