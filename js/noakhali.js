@@ -30,8 +30,7 @@ document.getElementById('noakhali_donation').addEventListener('click', function(
        const historyList = document.createElement('div');
        historyList.className = 'bg-white border-l-4 border-green-500 p-2'
        historyList.innerHTML = `
-        
-       <h2 class="text-2xl font-semibold ml-2 flex"><img src="/assets/coin.png" alt="" /> 
+       <h2 class="text-2xl font-semibold ml-2 flex"><img src="assets/coin.png" alt="" /> 
        <span class="font-bold text-green-500 text-3xl ml-2 mr-2">
        ${inputAmount} </span> BDT donated for Flood at Noakhali, Bangladesh.
        </h2> 
@@ -47,7 +46,7 @@ document.getElementById('noakhali_donation').addEventListener('click', function(
       icon: "success",
       title: `Thanks For Your Donation!
        <div class="flex justify-center items-center"> You Have Donated 
-    <img class="mx-0" src="/assets/coin.png" alt="" /> <span class="mx-0 font-bold text-green-500 text-3xl ml-2 mr-2 mb-2">
+    <img class="mx-0" src="assets/coin.png" alt="" /> <span class="mx-0 font-bold text-green-500 text-3xl ml-2 mr-2 mb-2">
      ${inputAmount}</span> BDT </div>`,
       showConfirmButton: false,
       timer: 1500
@@ -82,7 +81,7 @@ donationCalculation('feni_donation_amount', inputAmount)
     historyList.className = 'bg-white border-l-4 border-green-500 p-2'
     historyList.innerHTML = `
     <h2 class="text-2xl font-semibold ml-2 flex">
-    <img src="/assets/coin.png" alt="" /> 
+    <img src="assets/coin.png" alt="" /> 
     <span class="font-bold text-green-500 text-3xl ml-2 mr-2">
     ${inputAmount} </span> BDT donated for Flood Relief in Feni,Bangladesh.
     </h2> 
@@ -98,7 +97,7 @@ donationCalculation('feni_donation_amount', inputAmount)
    icon: "success",
    title: `Thanks For Your Donation!
     <div class="flex justify-center items-center"> You Have Donated 
-    <img class="mx-0" src="/assets/coin.png" alt="" /> <span class="mx-0 font-bold text-green-500 text-3xl ml-2 mr-2 mb-2">
+    <img class="mx-0" src="assets/coin.png" alt="" /> <span class="mx-0 font-bold text-green-500 text-3xl ml-2 mr-2 mb-2">
      ${inputAmount}</span> BDT </div>`,
    showConfirmButton: false,
    timer: 1500
@@ -134,7 +133,7 @@ document.getElementById('quota_donation').addEventListener('click', function(){
     const historyList = document.createElement('div');
     historyList.className = 'bg-white border-l-4 border-green-500 p-2'
     historyList.innerHTML = `
-    <h2 class="text-2xl font-semibold ml-2 flex"><img src="/assets/coin.png" alt="" /> 
+    <h2 class="text-2xl font-semibold ml-2 flex"><img src="assets/coin.png" alt="" /> 
     <span class="font-bold text-green-500 text-3xl ml-2 mr-2">
     ${inputAmount} </span> BDT donated for Aid for Injured in the Quota Movement.
     </h2> 
@@ -150,7 +149,7 @@ document.getElementById('quota_donation').addEventListener('click', function(){
    icon: "success",
    title: `Thanks For Your Donation!
    <div class="flex justify-center items-center"> You Have Donated 
-    <img class="mx-0" src="/assets/coin.png" alt="" /> <span class="mx-0 font-bold text-green-500 text-3xl ml-2 mr-2 mb-2">
+    <img class="mx-0" src="assets/coin.png" alt="" /> <span class="mx-0 font-bold text-green-500 text-3xl ml-2 mr-2 mb-2">
      ${inputAmount}</span> BDT </div>`,
    showConfirmButton: false,
    timer: 1500
